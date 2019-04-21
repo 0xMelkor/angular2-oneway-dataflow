@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MoneyTransferModule } from './features/money-transfer/money-transfer.module';
+import { MaterialSharedModule } from './common/modules/material-shared.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MoneyTransferModule,
+    MaterialSharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
