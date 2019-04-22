@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
     imports: [
         MatToolbarModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatSelectModule
     ],
     exports: [
         MatToolbarModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatSelectModule
     ],
     declarations: [],
     providers: [],

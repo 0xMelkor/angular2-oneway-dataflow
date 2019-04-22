@@ -5,6 +5,7 @@ import { Subject } from 'rxjs/internal/Subject';
 import { debounceTime, map, takeUntil, tap } from 'rxjs/operators';
 import { PaymentEditStoreModel as StoreModel } from '../../models/edit/payment-edit-store.model';
 import { StoreService } from '../../services/edit/store.service';
+import { Payer } from '../../models/edit/payment.model';
 
 @Component({
   selector: 'app-edit',
@@ -44,5 +45,8 @@ export class EditComponent implements OnInit, OnDestroy {
       });
   }
 
+  onPayerChange(payer: Payer) {
+    this.storeService.actionUpdatePayer(payer);
+  }
 
 }

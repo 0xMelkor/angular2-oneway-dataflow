@@ -1,4 +1,9 @@
 <mat-progress-bar *ngIf="isLoading; else content" mode="query" color="accent"></mat-progress-bar>
 <ng-template #content>
+  <h5>Payer info</h5>
+  <app-payer [accounts]="status?.payerAccounts" [payer]="status?.transaction?.payer" (payerChange)="onPayerChange($event)"></app-payer>
+  <hr>
 
+  <h5>Beneficiary info</h5>
+  <app-beneficiary></app-beneficiary>
 </ng-template>
