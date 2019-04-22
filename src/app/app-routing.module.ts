@@ -3,12 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { EditComponent } from './features/money-transfer';
 
 const routes: Routes = [
-  {
-    path: '', redirectTo: 'edit', pathMatch: 'full'
-  },
-  {
-    path: 'edit', component: EditComponent
-  }
+  { path: '', redirectTo: 'edit', pathMatch: 'full' },
+  { path: 'edit', component: EditComponent }
 ];
 
 @NgModule({

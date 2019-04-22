@@ -17,7 +17,20 @@ export interface Transaction {
 }
 
 export class TransactionUtil {
+
     static clone(t: Transaction): Transaction {
         return JSON.parse(JSON.stringify(t));
+    }
+
+    static updatePayer(t: Transaction, p: Payer) {
+        if (t) {
+            t.payer = p;
+        }
+    }
+
+    static updateBeneficiary(t: Transaction, b: Beneficiary) {
+        if (t) {
+            t.beneficiary = b;
+        }
     }
 }

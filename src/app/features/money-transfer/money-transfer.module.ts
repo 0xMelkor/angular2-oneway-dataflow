@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TransactionService, EditComponent } from '.';
+import { TransactionService, EditComponent, StoreService } from '.';
 
 @NgModule({
   imports: [
@@ -14,7 +14,8 @@ import { TransactionService, EditComponent } from '.';
     EditComponent
   ],
   providers: [
-    TransactionService
+    TransactionService,
+    StoreService
   ]
 })
 export class MoneyTransferModule { }

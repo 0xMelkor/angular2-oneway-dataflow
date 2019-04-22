@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { of } from 'rxjs/internal/observable/of';
 import { delay } from 'rxjs/operators';
-import { TransactionUtil, Transaction } from '../models/edit/payment.model';
+import { Transaction, TransactionUtil } from '../../models/edit/payment.model';
 
 /**
  * This service is intended to provide a fake remote CRUD interface for Transactions @see Transaction.
@@ -27,7 +27,7 @@ export class TransactionService {
     }
 
     readTransaction(id: number): Observable<Transaction> {
-        const t = this.getStoredTransactions().filter(t => t.id === id)[0];
+        const t = this.getStoredTransactions().filter(tr => tr.id === id)[0];
         return of(t).pipe(delay(200));
     }
 
