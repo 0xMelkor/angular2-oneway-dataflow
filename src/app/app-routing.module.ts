@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListComponent } from './features/money-transfer';
+import { EditComponent } from './features/money-transfer';
 
 const routes: Routes = [
   {
-    path: '', redirectTo: 'list', pathMatch: 'full'
+    path: '', redirectTo: 'edit', pathMatch: 'full'
   },
   {
-    path: 'list', component: ListComponent
+    path: 'edit', component: EditComponent
   }
 ];
 

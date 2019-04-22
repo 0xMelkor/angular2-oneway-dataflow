@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MaterialSharedModule } from './common/modules';
-import { MoneyTransferModule } from './features/money-transfer';
+import { MoneyTransferModule } from './features/money-transfer/money-transfer.module';
 
 
 @NgModule({
