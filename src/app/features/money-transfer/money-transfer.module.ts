@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MaterialSharedModule } from 'src/app/common/modules';
+import { EditComponent, StoreService, TransactionService } from '.';
 
-import { TransactionService, EditComponent, StoreService } from '.';
 
 @NgModule({
   imports: [
     CommonModule,
+    MaterialSharedModule
   ],
   declarations: [
     EditComponent
