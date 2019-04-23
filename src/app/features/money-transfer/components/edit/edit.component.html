@@ -5,5 +5,5 @@
   <hr>
 
   <h5>Beneficiary info</h5>
-  <app-beneficiary></app-beneficiary>
+  <app-beneficiary [paymentReasons]="status?.paymentReasons" [beneficiary]="status?.transaction?.beneficiary" (beneficiaryChange)="onBeneficiaryChange($event)"></app-beneficiary>
 </ng-template>

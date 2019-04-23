@@ -1,3 +1,26 @@
-<p>
-  beneficiary works!
-</p>
+<form [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field>
+        <input matInput formControlName="beneficiaryIbanCtrl" placeholder="Beneficiary IBAN">
+      </mat-form-field>
+    </div>
+    <div class="col-6">
+      <mat-form-field>
+        <input matInput formControlName="amountCtrl" placeholder="Amount" type="number">
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field>
+        <mat-label>Payment reason</mat-label>
+        <mat-select formControlName="paymentReasonCtrl">
+          <mat-option *ngFor="let paymentReason of paymentReasons" [value]="paymentReason">
+            {{paymentReason}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</form>

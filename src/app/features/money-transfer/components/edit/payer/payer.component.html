@@ -1,10 +1,14 @@
-<div [formGroup]="formGroup" class="col-6">
-  <mat-form-field>
-    <mat-label>Payer IBAN</mat-label>
-    <mat-select formControlName="payerIbanCtrl">
-      <mat-option *ngFor="let account of accounts" [value]="account">
-        {{account}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-</div>
+<form [formGroup]="formGroup">
+  <div class="row">
+    <div class="col-6">
+      <mat-form-field>
+        <mat-label>Payer IBAN</mat-label>
+        <mat-select formControlName="payerIbanCtrl">
+          <mat-option *ngFor="let account of accounts" [value]="account">
+            {{account}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+</form>

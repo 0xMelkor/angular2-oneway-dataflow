@@ -11,10 +11,11 @@ import { Payer } from '../../../models/edit/payment.model';
 })
 export class PayerComponent implements OnInit, OnChanges {
 
+  @Output() payerChange = new EventEmitter<Payer>();
+
   @Input() accounts: string[];
   @Input() payer: Payer;
 
-  @Output() payerChange = new EventEmitter<Payer>();
 
   formGroup: FormGroup;
 
